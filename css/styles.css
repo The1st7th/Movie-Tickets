@@ -1,0 +1,19 @@
+body {
+  font-size: 14pt;
+}
+
+
+h1 {
+  text-align: center;
+  margin: 100px 0 0 100px;
+  padding-bottom: 10%;
+  padding-right: 10%;
+}
+
+button {
+  margin-top: 5px;
+}
+
+textarea {
+  display: none;
+}

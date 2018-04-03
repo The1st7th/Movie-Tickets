@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Community Movie Theater</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Coco</h2>
+          <p>Despite his family's generations-old ban on music, young Miguel dreams of becoming an accomplished musician like his idol Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead. After meeting a charming trickster named Héctor, the two new friends embark on an extraordinary journey to unlock the real story behind Miguel's family history.</p>
+          <form class="new-movie" value="true">
+            <div class="form-group">
+              <textarea> true </textarea>
+              <label for="age">Please enter your age</label>
+              <input  class="age" type="text" class="form-control short">
+
+              <label class="control-label" for="times">Choose time</label>
+              <select class="form-control short" id="times">
+                <option value="1">9:00am</option>
+                <option value="2">1:30pm</option>
+                <option value="3">7:00pm</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-info">Submit</button>
+
+            <div  class="outputCoco">
+              <p>Ticket price: <span  class="price"></span></p>
+            </div>
+            </form>
+
+        </div>
+
+
+        <div class="col-md-4">
+          <h2>Pacific Rim Uprising’s Long Road</h2>
+          <p>The Pacific Rim franchise suffered countless setbacks and near-cancellations before a second movie got off the ground.</p>
+          <form class="new-movie" id="Coco">
+            <div class="form-group">
+              <textarea> false </textarea>
+              <label for="age">Please enter your age</label>
+              <input  class="age" type="text" class="form-control short">
+
+              <label class="control-label" for="times">Choose time</label>
+              <select class="form-control short" id="times">
+                <option value="1">9:00am</option>
+                <option value="2">1:30pm</option>
+                <option value="3">7:00pm</option>
+              </select>
+            </div>
+
+              <button type="submit" class="btn btn-info" id="submitCoco">Submit</button>
+
+              <div>
+                <p>Ticket price: <span  class="price"></span></p>
+              </div>
+            </form>
+        </div>
+
+        <div class="col-md-4">
+          <h2>Sherlock Gnomes</h2>
+          <p>They're On A Mission To Bring Everyone Gnome Home. After a string of garden gnome disappearances in London, Gnomeo and Juliet look to legendary detective Sherlock Gnomes to solve the case of their missing friends and family.</p>
+          <form class="new-movie" value="true">
+            <div class="form-group">
+              <textarea> false </textarea>
+              <label for="age">Please enter your age</label>
+              <input  class="age" type="text" class="form-control short">
+
+              <label class="control-label" for="times">Choose time</label>
+              <select class="form-control short" id="times">
+                <option value="1">9:00am</option>
+                <option value="2">1:30pm</option>
+                <option value="3">7:00pm</option>
+              </select>
+            </div>
+
+              <button type="submit" class="btn btn-info" id="submitCoco">Submit</button>
+              <div>
+                <p>Ticket price: <span  class="price"></span></p>
+              </div>
+            </form>
+            
+        </div>
+    </div>
+
+  </body>
+</html>
