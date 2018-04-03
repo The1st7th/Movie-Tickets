@@ -5,28 +5,30 @@ function Movie(trueOrFalse,time, age) {
 }
 
 Movie.prototype.price = function() {
-  //console.log(this.time);
-  //console.log(this.age);
-  //console.log(this.freshRelease);
-  var price = 10;
-  if(this.time === 1){
-    price -= 2;
-  }else if(this.time === 3){
-    price += 2;
+
+  var ticketPrice = 10;
+  if(this.time === '1'){
+    ticketPrice -= 2;
+  }else if(this.time == '3'){
+    ticketPrice += 2;
   }
   if(this.age <= 12) {
-    price -= 3;
+    ticketPrice -= 3;
   }else if(this.age > 12 && this.age < 21) {
-    price -= 2;
+    ticketPrice -= 2;
   }
-  if(this.freshRelease) {
-    price +=3;
+  if(this.freshRelease === "true") {
+    ticketPrice +=3;
   }
-  return price;
+  return ticketPrice;
 }
 function resetFields() {
     $("input#age").val("");
 }
+
+var validate = function(string) {
+  return /^\d+$/.test(string);
+};
 
 
 // UI logic.
@@ -34,18 +36,24 @@ $(document).ready(function(){
 
   $("form").submit(function(event){
     event.preventDefault();
-    console.log("hello");
 
-    var ageinput =  parseInt($(this).find(".age").val());
-    console.log(ageinput);
+    var ageinput = $(this).find(".age").val();
+    if (!validate(ageinput)){
+      alert("Plese enter your age as a positive number.")
+    }
+    ageinput =  parseInt($(this).find(".age").val());
+
     var timeinput = $(this).find("select#times").val();
-    console.log(timeinput);
-    var freshRelease = $(this).find("textarea").val();
-    console.log(freshRelease);
 
-    var NewMovie = new Movie(freshRelease,ageinput, timeinput);
+    var freshRelease = $(this).find("textarea").val();
+
+    if (!validate(ageinput)){
+      alert("Plese enter your age as a positive number.")
+    }
+    var NewMovie = new Movie(freshRelease,timeinput,ageinput);
     var ticketPrice = NewMovie.price();
-    console.log(ticketPrice);
     $(this).find('.price').text(ticketPrice);
   });
+
+  resetFields();
 });
